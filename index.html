@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Fonts -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Kumbh+Sans:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              softRed: "hsl(7, 99%, 70%)",
+              yellow: "hsl(51, 100%, 49%)",
+              darkDesaturatedCyan: "hsl(167, 40%, 24%)",
+              darkBlue: "hsl(198, 62%, 26%)",
+              darkModerateCyan: "hsl(168, 34%, 41%)",
+              veryDarkDesaturatedBlue: "hsl(212, 27%, 19%)",
+              veryDarkGrayishBlue: "hsl(213, 9%, 39%)",
+              darkGrayishBlue: "hsl(232, 10%, 55%)",
+              grayishBlue: "hsl(210, 4%, 67%)",
+              white: "hsl(0, 0%, 100%)",
+            },
+            fontFamily: {
+              barlow: ["Barlow", "sans-serif"],
+              fraunces: ["Fraunces", "serif"],
+            },
+            fontSize: {
+              body: "18px",
+            },
+            screens: {
+              sm: "375px",
+              lg: "1440px",
+            },
+            backgroundImage: {
+              "d-image-header": "url('/images/desktop/image-header.jpg')",
+              "m-image-header": "url('/images/mobile/image-header.jpg')",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-barlow">
+    <header
+      class="min-h-screen w-full bg-cover bg-center bg-m-image-header md:bg-d-image-header"
+    >
+      <nav class="flex justify-between items-center px-8 py-6">
+        <!-- Logo -->
+        <img src="./images/logo.svg" alt="Logo" class="h-8" />
+
+        <!-- Menu Hamburger pour mobile -->
+        <button class="lg:hidden flex items-center" id="menu-toggle">
+          <img src="./images/icon-hamburger.svg" alt="Menu" class="w-6 h-6" />
+        </button>
+
+        <!-- Menu principal -->
+        <div
+          class="flex items-center gap-10 lg:flex-row flex-col lg:gap-10 absolute lg:relative bg-black lg:bg-transparent inset-0 lg:inset-auto p-8 lg:p-0 gap-6 lg:flex lg:items-center hidden"
+          id="menu"
+        >
+          <ul class="flex items-center gap-10 text-white lg:flex-row flex-col">
+            <li class="hover:underline">
+              <a href="#">Home</a>
+            </li>
+            <li class="hover:underline">
+              <a href="#">About</a>
+            </li>
+            <li class="hover:underline">
+              <a href="#">Services</a>
+            </li>
+          </ul>
+          <button
+            type="button"
+            class="py-3 px-7 bg-white rounded-full uppercase font-semibold text-black"
+          >
+            Contact
+          </button>
+        </div>
+      </nav>
+
+      <h1
+        class="text-center text-white text-4xl mt-32 font-[600] tracking-[0.5rem] font-fraunces"
+      >
+        WE ARE CREATIVE
+      </h1>
+
+      <div class="flex justify-center mt-32">
+        <img
+          src="./images/icon-arrow-down.svg"
+          class="h-[160px]"
+          alt="arrow down"
+        />
+      </div>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2">
+      <div class="flex flex-col justify-center bg-gray-50 p-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          Transform your brand
+        </h2>
+        <p class="text-gray-600 mb-6">
+          We are a full-service creative agency specializing in helping brands
+          grow fast. Engage your clients through compelling visuals that do most
+          of the marketing for you.
+        </p>
+        <a href="#" class="text-yellow-500 font-semibold underline"
+          >Learn more</a
+        >
+      </div>
+
+      <div class="bg-yellow-300">
+        <img
+          src="./images/desktop/image-transform.jpg"
+          alt="Egg"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <div class="bg-red-300">
+        <img
+          src="./images/desktop/image-stand-out.jpg"
+          alt="Cup"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <div class="flex flex-col justify-center bg-gray-50 p-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          Stand out to the right audience
+        </h2>
+        <p class="text-gray-600 mb-6">
+          Using a collaborative formula of designers, researchers,
+          photographers, videographers, and copywriters, we’ll build and extend
+          your brand in digital places.
+        </p>
+        <a href="#" class="text-yellow-500 font-semibold underline"
+          >Learn more</a
+        >
+      </div>
+
+      <div class="bg-red-300 relative">
+        <img
+          src="./images/desktop/image-graphic-design.jpg"
+          alt="Cup"
+          class="w-full h-full object-cover"
+        />
+        <div
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center"
+        >
+          <h2 class="text-4xl font-bold mb-4">Graphic Design</h2>
+          <p class="text-xl">
+            Great design makes you memorable. We deliver artwork that
+            underscores your brand message and captures potential clients'
+            attention.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-red-300">
+        <img
+          src="./images/desktop/image-photography.jpg"
+          alt="Cup"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+
+    <div class="bg-gray-50 py-16 px-8">
+      <h2
+        class="text-center text-lg font-semibold tracking-wide text-gray-600 uppercase mb-12"
+      >
+        Client Testimonials
+      </h2>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+      >
+        <!-- Testimonial 1 -->
+        <div class="text-center">
+          <img
+            class="w-24 h-24 rounded-full mx-auto mb-6"
+            src="https://via.placeholder.com/96"
+            alt="Emily R."
+          />
+          <p class="text-gray-600 mb-4">
+            We put our trust in Sunnyside and they delivered, making sure our
+            needs were met and deadlines were always hit.
+          </p>
+          <h3 class="text-gray-800 font-semibold">Emily R.</h3>
+          <p class="text-gray-500 text-sm">Marketing Director</p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="text-center">
+          <img
+            class="w-24 h-24 rounded-full mx-auto mb-6"
+            src="https://via.placeholder.com/96"
+            alt="Thomas S."
+          />
+          <p class="text-gray-600 mb-4">
+            Sunnyside’s enthusiasm coupled with their keen interest in our
+            brand’s success made it a satisfying and enjoyable experience.
+          </p>
+          <h3 class="text-gray-800 font-semibold">Thomas S.</h3>
+          <p class="text-gray-500 text-sm">Chief Operating Officer</p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="text-center">
+          <img
+            class="w-24 h-24 rounded-full mx-auto mb-6"
+            src="https://via.placeholder.com/96"
+            alt="Jennie F."
+          />
+          <p class="text-gray-600 mb-4">
+            Incredible end result! Our sales increased over 400% when we worked
+            with Sunnyside. Highly recommended!
+          </p>
+          <h3 class="text-gray-800 font-semibold">Jennie F.</h3>
+          <p class="text-gray-500 text-sm">Business Owner</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white">
+      <!-- Galerie d'images -->
+      <div class="grid sm:grid-cols-2 md:grid-cols-4">
+        <picture>
+          <source
+            srcset="./images/mobile/image-gallery-milkbottles.jpg"
+            media="(max-width: 767px)"
+          />
+          <source
+            srcset="./images/desktop/image-gallery-milkbottles.jpg"
+            media="(min-width: 768px)"
+          />
+          <img
+            src="./images/desktop/image-gallery-milkbottles.jpg"
+            alt="Image 1"
+            class="w-full h-auto object-cover"
+          />
+        </picture>
+        <picture>
+          <source
+            srcset="./images/mobile/image-gallery-orange.jpg"
+            media="(max-width: 767px)"
+          />
+          <source
+            srcset="./images/desktop/image-gallery-orange.jpg"
+            media="(min-width: 768px)"
+          />
+          <img
+            src="./images/desktop/image-gallery-orange.jpg"
+            alt="Image 2"
+            class="w-full h-auto object-cover"
+          />
+        </picture>
+        <picture>
+          <source
+            srcset="./images/mobile/image-gallery-cone.jpg"
+            media="(max-width: 767px)"
+          />
+          <source
+            srcset="./images/desktop/image-gallery-cone.jpg"
+            media="(min-width: 768px)"
+          />
+          <img
+            src="./images/desktop/image-gallery-cone.jpg"
+            alt="Image 3"
+            class="w-full h-auto object-cover"
+          />
+        </picture>
+        <picture>
+          <source
+            srcset="./images/mobile/image-gallery-sugar-cubes.jpg"
+            media="(max-width: 767px)"
+          />
+          <source
+            srcset="./images/desktop/image-gallery-sugarcubes.jpg"
+            media="(min-width: 768px)"
+          />
+          <img
+            src="./images/desktop/image-gallery-sugarcubes.jpg"
+            alt="Image 4"
+            class="w-full h-auto object-cover"
+          />
+        </picture>
+      </div>
+
+      <!-- Pied de page -->
+      <footer class="bg-teal-300 text-center py-12">
+        <h2 class="text-2xl font-bold text-teal-700 mb-6">sunnyside</h2>
+        <nav class="mb-6">
+          <ul class="flex justify-center space-x-6 text-teal-700 font-medium">
+            <li><a href="#" class="hover:underline">About</a></li>
+            <li><a href="#" class="hover:underline">Services</a></li>
+            <li><a href="#" class="hover:underline">Projects</a></li>
+          </ul>
+        </nav>
+        <div class="flex justify-center space-x-6 text-teal-700">
+          <a href="#" aria-label="Facebook">
+            <img
+              src="./images/icon-facebook.svg"
+              alt="Image 4"
+              class="w-full h-auto object-cover"
+            />
+          </a>
+          <a href="#" aria-label="Instagram">
+            <img
+              src="./images/icon-instagram.svg"
+              alt="Image 4"
+              class="w-full h-auto object-cover"
+            />
+          </a>
+          <a href="#" aria-label="Twitter">
+            <img
+              src="./images/icon-twitter.svg"
+              alt="Image 4"
+              class="w-full h-auto object-cover"
+            />
+          </a>
+          <a href="#" aria-label="Pinterest">
+            <img
+              src="./images/icon-pinterest.svg"
+              alt="Image 4"
+              class="w-full h-auto object-cover"
+            />
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("menu");
+
+      menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
